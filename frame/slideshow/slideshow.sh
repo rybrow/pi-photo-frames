@@ -37,7 +37,7 @@ feh \
 --auto-zoom \
 --fullscreen \
 --no-menus \
---duration ${duration} \
+--slideshow-delay ${duration} \
 --filelist /slideshow/slides.txt \
 ${additional_args}
 
