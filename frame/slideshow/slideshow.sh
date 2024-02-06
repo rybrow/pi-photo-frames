@@ -29,7 +29,7 @@ if ! [ -f /slideshow/slides.txt ]; then
 fi
 
 duration=$(jq -r .duration /slideshow/settings.json)
-if [ $(jq -r .randomize /slideshow/settings.json) == "true" ]; then
+if [ "$(jq -r .randomize /slideshow/settings.json)" == "true" ]; then
     additional_args=" --randomize ${additional_args}"
 fi
 
@@ -41,7 +41,7 @@ feh \
 --filelist /slideshow/slides.txt \
 ${additional_args}
 
-function create_info_image () {
+create_info_image () {
     # $1 - text
     convert -size 1000x1000 xc:black +repage \
     -size 800x800  -fill white -background None  \
