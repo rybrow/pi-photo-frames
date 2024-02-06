@@ -41,7 +41,7 @@ feh \
 --filelist /slideshow/slides.txt \
 ${additional_args}
 
-function create_info_image() {
+function create_info_image {
     # $1 - text
     convert -size 1000x1000 xc:black +repage \
     -size 800x800  -fill white -background None  \
